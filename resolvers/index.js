@@ -1,4 +1,5 @@
 import slugify from 'slugify';
+import _ from 'lodash';
 
 export const resolvers = {
     Query: {
@@ -10,14 +11,13 @@ export const resolvers = {
             };
         },
         users: (parent, args, { users }) => {
-            return Object.values(users);
+            return users;
         },
         user: (parent, { id }, { users }) => {
             return users[id];
         },
     },
     User: {
-        fullname: (user) => `${user.firstname} ${user.lastname}`,
         username: (user) => slugify(`${user.firstname} ${user.lastname}`, { replacement: '.', lower: true }),
     },
 };

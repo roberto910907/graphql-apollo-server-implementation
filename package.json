@@ -4,7 +4,7 @@
   "description": "GraphQL Server Implementation using Express",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon --exec babel-node src/index.js",
+    "start": "nodemon --exec babel-node --delay 2500ms src/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
@@ -14,6 +14,8 @@
     "apollo-server-express": "^2.7.2",
     "express": "^4.17.1",
     "graphql": "^14.4.2",
+    "kill-port": "^1.5.1",
+    "lodash": "^4.17.15",
     "slugify": "^1.3.4"
   },
   "devDependencies": {
@@ -21,6 +23,7 @@
     "@babel/node": "^7.5.5",
     "@babel/preset-env": "^7.5.5",
     "@babel/register": "^7.5.5",
+    "kexec": "^3.0.0",
     "nodemon": "^1.19.1"
   }
 }

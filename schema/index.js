@@ -12,6 +12,7 @@ export const schema = gql`
     username: String!,
     firstname: String!,
     lastname: String!,
-    fullname: String!,
+    name: String!,
+    friends: [User!]
   }
 `;
